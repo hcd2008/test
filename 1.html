@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jquery.js"></script>
+	<script src="calendar.js"></script>
+	<script src="config.js"></script>
+	<script src="common.js"></script>
+</head>
+<body>
+	<?php 
+		function dcalendar($name, $value = '', $sep = '-') {
+			
+			$calendar = '';
+			$id = str_replace(array('[', ']'), array('', ''), $name);
+			
+				$destoon_calendar_id = 1;
+				$calendar .= '<script type="text/javascript" src="calendar.js"></script>';
+			
+			$calendar .= '<input type="text" name="'.$name.'" id="'.$id.'" value="'.$value.'" size="10" onfocus="ca_show(\''.$id.'\', this, \''.$sep.'\');" readonly ondblclick="this.value=\'\';"/> <img src="calendar.gif" align="absmiddle" onclick="ca_show(\''.$id.'\', this, \''.$sep.'\');" style="cursor:pointer;"/>';
+			return $calendar;
+		}
+		echo dcalendar("vae");
+	 ?>
+</body>
+</html>

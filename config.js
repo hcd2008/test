@@ -1,0 +1,1 @@
+var DTPath = "http://localhost/data/";var SKPath = "http://localhost/data/skin/default/";var MEPath = "http://localhost/data/member/";var EXPath = "http://localhost/data/extend/";var CKDomain = "";var CKPath = "/";var CKPrex = "cbq_";
